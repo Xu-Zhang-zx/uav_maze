@@ -1,0 +1,19 @@
+1、目标检测--yolov11
+    1、数据集获取
+    2、训练
+    3、yolov11的ros节点
+2、FUEL开源探索算法
+    1、相机坐标：<arg name="camera_pose_topic" value="/iris_0/camera_pose"/>
+        修改视觉定位
+        camera_transfer.py发布话题/iris_0/camera_pose
+    2、launch参数修改
+        可储存地图大小
+        无人机初始位置
+        历程计话题
+        可探索范围
+        深度图话题
+        深度相机内参：rostopic echo /iris_0/realsense/depth_camera/color/camera_info
+3、控制器
+    1、使用视觉伺服（P控制）
+    2、当目标位于中心时降落
+    3、起飞点降落标志排除逻辑

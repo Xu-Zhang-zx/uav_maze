@@ -1,0 +1,13 @@
+# 获取yolo训练数据
+## 录制相应话题图像
+rosbag record /iris_0/camera/image_raw -o /home/xu/Code/uav_maze/bag/1.bag
+## 播放查看是否成功录制
+rosbag play /home/xu/Code/uav_maze/bag/1_2025-06-24-20-59-10.bag
+## 抽帧
+python3.8 image_generate.py /home/xu/Code/uav_maze/bag/1_2025-06-24-21-29-45.bag /home/xu/Code/uav_maze/datasets/images /iris_0/camera/image_raw
+## labelImg标注
+conda activate yolov11
+labelImg
+## 数据集划分
+python split_datasets.py 
+
