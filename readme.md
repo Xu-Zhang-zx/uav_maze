@@ -36,6 +36,7 @@ git clone https://github.com/robin-shaun/XTDrone.git
 cd XTDrone
 ./setup.sh
 ```
+**请注意需要修改无人机定位方式为视觉定位！！！请参照语雀平台中修改px4中EKF的方式**
 
 ### 2. YOLOv11环境配置
 参考网上教程！
